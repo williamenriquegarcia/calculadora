@@ -1,1 +1,48 @@
+@font-face{
+    font-family: digital;
+    src : url('../../assets/fonts/digital.ttf')
+}
 
+p{
+    background-color: #181616;
+    padding: 15px;
+    color:white;
+}
+
+#pantalla{
+    font-family:digital;
+    font-size: 200%;
+    text-align: right;
+    color: black;
+    background-color: #D1CBCB;
+}
+
+.botonCalculadora{
+    text-align: center;
+    border-radius: 20px;
+}
+
+#marcoPantalla{
+    background-color: black
+}
+
+#marcoPrincipal{
+    background-color: gray
+}
+
+.botonCalculadora:link {
+    background-color: green;
+}
+  
+.botonCalculadora:visited {
+  background-color: green;
+}
+  
+.botonCalculadora:hover {
+  background-color: red;
+}
+  
+.botonCalculadora:active {
+  background-color: yellow;
+  color: red
+}
