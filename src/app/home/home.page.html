@@ -1,14 +1,90 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      calculadora
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
+
+
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+  <ion-grid id="marcoPrincipal">
+
+    
+    <ion-row id="marcoLogo">
+      <ion-col size="12">
+        <img src="../../assets/imagenes/imagencalculadora.png">
+      </ion-col>
+    </ion-row>
+
+    <ion-row id="marcoPantalla">
+      <ion-col size="12">
+        <p id="pantalla">{{pantalla}}</p>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="3">
+        <ion-button color="medium" class="botonCalculadora" (click)="number('7')">7</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button color="medium" class="botonCalculadora" (click)="number('8')">8</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button color="medium" class="botonCalculadora" (click)="number('9')">9</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button color="medium" class="botonCalculadora" (click)="number('/')">/</ion-button>
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row>
+      <ion-col size="3">
+        <ion-button color="medium" class="botonCalculadora" (click)="number('4')">4</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button color="medium" class="botonCalculadora" (click)="number('5')">5</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button color="medium" class="botonCalculadora" (click)="number('6')">6</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button color="medium" class="botonCalculadora" (click)="number('*')">*</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="3">
+        <ion-button color="medium" class="botonCalculadora" (click)="number('1')">1</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button color="medium" class="botonCalculadora" (click)="number('2')">2</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button color="medium" class="botonCalculadora" (click)="number('3')">3</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button color="medium" class="botonCalculadora" (click)="number('-')">-</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="3">
+        <ion-button color="medium" class="botonCalculadora" (click)="number('0')">0</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button color="medium" class="botonCalculadora" (click)="number('.')">.</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button color="medium" class="botonCalculadora" (click)="number('=')">=</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button color="medium" class="botonCalculadora" (click)="number('+')">+</ion-button>
+      </ion-col>
+    </ion-row>
+
+   
+  </ion-grid>
 </ion-content>
