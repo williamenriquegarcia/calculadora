@@ -7,6 +7,16 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  private pantalla;
+
+  constructor() 
+  {
+    this.pantalla=0;
+  }
+
+  number(x)
+  {
+    this.pantalla=x;
+  }
 
 }
