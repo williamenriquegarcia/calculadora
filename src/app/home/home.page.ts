@@ -13,6 +13,10 @@ export class HomePage {
   private coseno;
   private tangente;
   private potencia;
+  private base;
+  private exponente;
+  private tamanoBase;
+  private contadorExponente;
 
   constructor() 
   {
@@ -20,12 +24,18 @@ export class HomePage {
     this.seno=false;
     this.coseno=false;
     this.tangente=false;
+    this.potencia=false;
+    this.contadorExponente=0;
   }
 
   number(x)
   {
     this.memoria=this.memoria+x;
     this.pantalla=(this.memoria);
+    if(this.potencia)
+    {
+      this.contadorExponente=this.contadorExponente+1;
+    }
   }
 
   equal()
@@ -33,27 +43,48 @@ export class HomePage {
     
     if(this.seno)
     {
-      var numero=this.pantalla.substring(3,this.pantalla.lenght);
+      var numero=this.pantalla.substring(3);
       this.pantalla=(Math.sin(numero));
       this.seno=false;
+      this.memoria="";
     }
     else if(this.coseno)
     {
-      var numero=this.pantalla.substring(3,this.pantalla.lenght);
+      var numero=this.pantalla.substring(3);
       this.pantalla=(Math.cos(numero));
       this.coseno=false;
+      this.memoria="";
     }
     else if(this.tangente)
     {
-      var numero=this.pantalla.substring(3,this.pantalla.lenght);
+      var numero=this.pantalla.substring(3);
       this.pantalla=(Math.tan(numero));
       this.tangente=false;
+      this.memoria="";
+    }
+    else if(this.potencia)
+    {
+      this.exponente=this.pantalla.substring(this.contadorExponente+1);
+      this.exponente=parseInt(this.exponente);
+      this.base=parseInt(this.base);
+      this.pantalla=Math.pow(this.base,this.exponente);
+      this.potencia=false;
+      this.memoria="";
+      this.exponente='';
+      this.base='';
+      this.contadorExponente=0;
     }
     else
     {
       this.pantalla=eval(this.pantalla);
+      this.memoria="";
     }
-  }
+
+    if(this.pantalla='NaN')
+    {
+      this.pantalla='error';
+    }
+  }//fin metodo
 
   calcularSeno()
   {
@@ -87,13 +118,12 @@ export class HomePage {
 
   elevarPotencia()
   {
-    this.memoria="^";
-    this.pantalla="^";
+    this.base=this.pantalla;
+    this.memoria=this.memoria+"^";
+    this.pantalla=this.pantalla+"^";
     this.seno=false;
     this.coseno=false;
     this.tangente=false;
     this.potencia=true;
   }
-  
-
-}
+}//fin clase
