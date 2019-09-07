@@ -79,11 +79,6 @@ export class HomePage {
       this.pantalla=eval(this.pantalla);
       this.memoria="";
     }
-
-    if(this.pantalla='NaN')
-    {
-      this.pantalla='error';
-    }
   }//fin metodo
 
   calcularSeno()
