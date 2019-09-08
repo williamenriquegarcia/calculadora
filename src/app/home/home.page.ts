@@ -28,7 +28,7 @@ export class HomePage {
     this.contadorExponente=0;
   }
 
-  number(x)
+  public number(x)
   {
     this.memoria=this.memoria+x;
     this.pantalla=(this.memoria);
@@ -38,7 +38,7 @@ export class HomePage {
     }
   }
 
-  equal()
+  public equal()
   {
     
     if(this.seno)
@@ -81,7 +81,7 @@ export class HomePage {
     }
   }//fin metodo
 
-  calcularSeno()
+  public calcularSeno()
   {
     this.memoria="sen";
     this.pantalla="sen";
@@ -91,7 +91,7 @@ export class HomePage {
     this.potencia=false;
   }
 
-  calcularCoseno()
+  public calcularCoseno()
   {
     this.memoria="cos";
     this.pantalla="cos";
@@ -101,7 +101,7 @@ export class HomePage {
     this.potencia=false;
   }
 
-  calcularTangente()
+  public calcularTangente()
   {
     this.memoria="tan";
     this.pantalla="tan";
@@ -111,7 +111,7 @@ export class HomePage {
     this.potencia=false;
   }
 
-  elevarPotencia()
+  public elevarPotencia()
   {
     this.base=this.pantalla;
     this.memoria=this.memoria+"^";
@@ -120,5 +120,18 @@ export class HomePage {
     this.coseno=false;
     this.tangente=false;
     this.potencia=true;
+  }
+
+  public resetear()
+  {
+    this.pantalla='0';
+    this.memoria='';
+    this.seno=false;
+    this.coseno=false;
+    this.tangente=false;
+    this.potencia=false;
+    this.base='';
+    this.exponente='';
+    this.contadorExponente=0;
   }
 }//fin clase
